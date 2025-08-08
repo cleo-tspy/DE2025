@@ -60,27 +60,3 @@
    pre-commit install
    pre-commit run --all-files
    ```
-
-## Git flow (local → GitHub)
-```bash
-git init -b main
-git add . && git commit -m "chore: init w0 starter"
-
-# create feature branch, commit
-git switch -c feat/w0-bash
-# ...edit files...
-git add . && git commit -m "feat(w0): bash exercises"
-# push to your GitHub repo (replace URL)
-git remote add origin https://github.com/<you>/de-projects.git
-git push -u origin feat/w0-bash
-
-# open PR (with GitHub CLI)
-gh pr create --fill --base main --head feat/w0-bash
-
-# simulate rebase workflow (after main moved ahead)
-git switch feat/w0-bash
-git fetch origin
-git rebase origin/main
-# resolve conflicts if any, then:
-git push --force-with-lease
-```
