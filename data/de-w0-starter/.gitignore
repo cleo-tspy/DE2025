@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.uv/
+.mypy_cache/
+.pytest_cache/
+.dist-info/
+.build/
+/artifacts/
+
+# Editors/OS
+.DS_Store
+.idea/
+.vscode/
+
+# Env & secrets
+.env
+*.pem
+*.key
+*.crt
+secrets.*
