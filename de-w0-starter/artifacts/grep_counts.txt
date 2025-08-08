@@ -1,0 +1,2 @@
+404_count=1
+5xx_count=2
