@@ -13,15 +13,21 @@
    uv sync
    ```
 
-   2.1) 啟用 pre-commit（含祕密掃描與 ruff） // 把開發用工具裝進專案（並寫進 pyproject.toml / lock 檔）
+   * Run
+
+   ```
+   source .venv/bin/activate
+   ```
+
+   * 2.1) 啟用 pre-commit（含祕密掃描與 ruff） // 把開發用工具裝進專案（並寫進 pyproject.toml / lock 檔）
    uv add --dev pre-commit detect-secrets ruff mypy pytest
    pre-commit install
    pre-commit run --all-files  # 先掃一次
-   
+
    ```
    •	pre-commit：Git hooks 框架（幫你在 commit 前跑檢查）
 	•	detect-secrets：掃出檔案裡的 API Key、密碼等
-	•	ruff：Python 的 Lint/Format（比 flake8/black 更快）
+	•	ruff：Python 的 Lint/Format.「自動排版（ruff format）+ 靜態檢查（ruff check）」。等同 Black + flake8 + isort 合一；commit 前會自動跑，違規就擋下。
 	•	mypy：型別檢查
 	•	pytest：測試框架
    ```

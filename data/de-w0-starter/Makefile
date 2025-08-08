@@ -19,7 +19,7 @@ fmt:
 	ruff format .
 
 demo:
-	python -m app.demo
+	PYTHONPATH=src python -m app.demo
 
 precommit:
 	pre-commit install

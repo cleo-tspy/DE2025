@@ -7,6 +7,7 @@ from common.logging_setup import setup_logger
 
 logger = setup_logger("app.demo")
 
+
 def main() -> None:
     load_dotenv()
     api_key = os.getenv("API_KEY", "<missing>")
@@ -17,6 +18,7 @@ def main() -> None:
         return
     df = pd.read_csv(data_path)
     logger.info("Rows=%d, TotalAmount=%.2f", len(df), df["amount"].sum())
+
 
 if __name__ == "__main__":
     main()
