@@ -1,5 +1,3 @@
-
-
 # DE2025 — Data Engineering Projects
 
 > 目標：端到端資料平台（ETL → Streaming → OLAP/Graph → Ontology/Knowledge Graph → Federation → Governance/Observability），並以企業級實務標準產出程式碼、文件與監控
@@ -56,10 +54,9 @@ flowchart TB
 
 
 ## About this repo
-- **Code and Asset**：`etl/`, `streaming/`, `storage/`, `ontology/`, `graph/`, `nlp/`, `api/`, `federation/`, `metadata/`, `observability/`, `security/`, `ci/`
+
 - **產出**：`artifacts/`（每週 demo 的輸出，例：`/artifacts/w1/`）
 - **已完成的文檔**：`docs/progress/W{週}.md`
-- **歸檔入口**：`docs/progress/`（完成週卡集中處）
 
 
 ## Quick Start
@@ -77,4 +74,3 @@ make demo     # 本週 demo；輸出固定在 artifacts/
 
 ## Portfolio
 - README 保持**一頁總覽**與快速啟動；詳情請見 Notion 主頁與 `docs/progress/` 歸檔
-- 每階段至少 1 篇技術文章（痛點→架構→數據→改進）

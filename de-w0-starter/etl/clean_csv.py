@@ -10,7 +10,7 @@ def clean_with_dq(in_path: str | Path, out_dir: str | Path) -> None:
 
     # 型別標準化
     if "date" in df.columns:
-        df["date"] = pd.to_datetime(df["date"], errors="coerce", utc=True)
+        df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d", errors="coerce", utc=True)
     if "amount" in df.columns:
         df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
 
